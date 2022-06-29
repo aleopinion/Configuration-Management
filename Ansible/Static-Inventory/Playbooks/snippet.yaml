@@ -1,0 +1,55 @@
+---
+ - hosts:
+   become: 
+   tasks:
+   # Task 1: 
+   - name: 
+     module: 
+      name: 
+      state:
+   # Task 2: 
+   - name: 
+     module:
+      name: 
+      state:
+
+
+---
+ - hosts: webservers
+   become: yes
+   tasks:
+   # Task 1: Installing Apache
+   - name: Installing apache in production
+     yum: 
+      name: httpd
+      state: present
+   # Task 2: Starting Apache
+   - name: Starting apache in production
+     service: 
+      name: httpd
+      state: started
+
+---
+ - hosts: appservers
+   become: yes
+   tasks:
+   # Task 1: Installing Apache Tomcat in Production
+   - name: Installing apache tomcat software
+     yum: 
+      name: tomcat
+      state: present
+   # Task 2: Starting Apache
+   - name: Starting apache tomcat
+     service: 
+      name: tomcat
+      state: started   
+
+---
+ - hosts: dbservers
+   become: yes
+   tasks:
+   # Task 1: Installing MySQL in Production
+   - name: Installing MySQL in Production
+     yum: 
+      name: mysql
+      state: present         

@@ -1,0 +1,9 @@
+---
+ - hosts: dbservers
+   become: yes
+   tasks:
+   # Task 1: Installing MySQL in Production
+   - name: Installing MySQL in Production
+     yum: 
+      name: mysql
+      state: present

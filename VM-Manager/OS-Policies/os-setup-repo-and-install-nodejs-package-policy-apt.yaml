@@ -1,0 +1,9 @@
+id: setup-repo-and-install-package-policy
+mode: ENFORCEMENT
+resourceGroups:
+    resources:
+      - id: install-pkg-node
+        pkg:
+          desiredState: INSTALLED
+          apt:
+            name: nodejs

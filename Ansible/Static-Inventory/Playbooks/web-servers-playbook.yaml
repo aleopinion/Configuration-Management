@@ -1,0 +1,14 @@
+---
+ - hosts: webservers
+   become: yes
+   tasks:
+   # Task 1: Installing Apache
+   - name: Installing apache in production
+     yum: 
+      name: httpd
+      state: present
+   # Task 2: Starting Apache
+   - name: Starting apache in production
+     service: 
+      name: httpd
+      state: started
